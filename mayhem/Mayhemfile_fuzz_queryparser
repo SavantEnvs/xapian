@@ -1,0 +1,10 @@
+project: savantenvs/xapian
+target: fuzz_queryparser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_queryparser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_queryparser
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_queryparser/fuzz_queryparser.dict
+    timeout: 10

@@ -1,0 +1,1 @@
+<?xml version="1.0"?><!DOCTYPE r [<!ENTITY e "v">]><r a="1" b='2'><!-- c --><i>text &amp; &#65; &#x42; &lt;</i><![CDATA[ <raw> ]]><?pi x?></r>

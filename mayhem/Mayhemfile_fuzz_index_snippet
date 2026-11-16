@@ -1,0 +1,10 @@
+project: savantenvs/xapian
+target: fuzz_index_snippet
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_index_snippet/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_index_snippet
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_index_snippet/fuzz_index_snippet.dict
+    timeout: 10

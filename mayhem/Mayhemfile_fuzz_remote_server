@@ -1,0 +1,9 @@
+project: savantenvs/xapian
+target: fuzz_remote_server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_remote_server/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_remote_server
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,25 @@
+stem-en running run
+stem-en fishing fish
+stem-en generously generous
+stem-en happiness happi
+stem-en caresses caress
+stem-en ponies poni
+stem-fr continuellement continuel
+stem-de aufeinanderfolgenden aufeinanderfolg
+query [hello world] Query((Zhello@1 OR Zworld@2))
+roundtrip ok
+query [cats AND dogs] Query((Zcat@1 AND Zdog@2))
+roundtrip ok
+query [title:fun "exact phrase" -bad] Query(((ZSfun@1 OR (exact@2 PHRASE 2 phrase@3)) AND_NOT Zbad@4))
+roundtrip ok
+query [site:example.org apples] Query((Zappl@1 FILTER Hexample.org))
+roundtrip ok
+query [a OR b NOT c] Query((Za@1 OR (Zb@2 AND_NOT Zc@3)))
+roundtrip ok
+doccount 4 lastdocid 4 avlength 15
+termfreq Zfox 2 Zlazi 2 Zdog 2
+matches 2
+hit docid=2 rank=0 pct=100 data=a quick brown dog outpaces a quick red fox
+hit docid=1 rank=1 pct=84 data=the quick brown fox jumps over the lazy dog
+andnot 2
+snippet ...quick brown <b>dog</b> outpaces a quick red fox

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed</title>
+<entry>
+<title>Helium</title>
+<author><name>Olly</name></author>
+<category term="x" />
+<summary type="html">&lt;b&gt;bold&lt;/b&gt; text</summary>
+<content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>hi</p></div></content>
+</entry>
+</feed>

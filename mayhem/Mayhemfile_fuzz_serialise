@@ -1,0 +1,9 @@
+project: savantenvs/xapian
+target: fuzz_serialise
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_serialise/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_serialise
+    libfuzzer: true
+    timeout: 10

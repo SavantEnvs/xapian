@@ -1,0 +1,9 @@
+project: savantenvs/xapian
+target: fuzz_db_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_db_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_db_file
+    libfuzzer: true
+    timeout: 10
